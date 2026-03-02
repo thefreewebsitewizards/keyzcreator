@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff4d8d",
+                        "baby-pink": "#ffccd5",
+                        "light-pink": "#fff0f3",
+                        "deep-pink": "#c9184a",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a0b10",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        section[id] {
+            scroll-margin-top: 110px;
+        }
+        .paper-texture {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCVGmnulMhNpb9JbN_Z2ao9kE_-kRAQ60fcOjpSC9vfAuEwV6WdormJwbIsHLdO2i_sikZAcC-EMUH82sXsR32_wVzZJZTcgzt-14O1xJYdh49jouHWbo5nBCZPUjp-GGWx5YOMgDluyn8hx9A-jhp2C8XVW8KFV95O7nTk6Ar08aAV7-m8UYdyXFqdzx2FuXdVyMhUypgpfOw7cpMrzI8saTJLlOQfAuqxrVjR6uVY2Y2lVxMe_u3QbHRLxEj9k7Nqg0ZXkuO-HUU);
+            background-blend-mode: overlay;
+            background-color: #fff0f3;
+        }
+        .pink-gradient-text {
+            background: linear-gradient(to right, #ff4d8d, #c9184a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-pink-50 font-display selection:bg-primary/30">
+<div class="relative min-h-screen w-full flex flex-col paper-texture">
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/20 px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">auto_awesome</span>
+</div>
+<a class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase italic" href="#top">Keyz Bonita</a>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold text-slate-600 dark:text-pink-200 hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-bold text-slate-600 dark:text-pink-200 hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-sm font-bold text-slate-600 dark:text-pink-200 hover:text-primary transition-colors" href="#work">Portfolio</a>
+<a class="text-sm font-bold text-slate-600 dark:text-pink-200 hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<a class="bg-primary hover:bg-deep-pink text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-primary/20" href="#contact">
+                    Let's Collab
+                </a>
+</div>
+</header>
+<main class="flex-1">
+<section class="px-6 lg:px-20 py-16 lg:py-24 max-w-7xl mx-auto" id="top">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20 w-fit">
+<span class="material-symbols-outlined text-sm">location_on</span> NYC Based Content Creator
+                        </div>
+<h2 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
+                            Elevating Brands with <span class="text-primary italic">Editorial</span> Flair.
+                        </h2>
+<p class="text-lg text-slate-600 dark:text-pink-100/80 max-w-lg leading-relaxed">
+                            Crafting modern, feminine stories that resonate. I blend high-fashion aesthetics with relatable authenticity to help brands shine in the digital landscape.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-white px-8 py-4 rounded-full font-bold text-base shadow-xl shadow-primary/30 hover:bg-deep-pink transition-all" href="#work">
+                                View Recent Work
+                            </a>
+<a class="bg-white dark:bg-slate-800 border-2 border-primary/20 text-primary px-8 py-4 rounded-full font-bold text-base hover:bg-light-pink transition-colors" href="#contact">
+                                Get In Touch
+                            </a>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative group">
+<div class="absolute inset-0 bg-primary/20 rounded-xl rotate-3 scale-105 transition-transform group-hover:rotate-6"></div>
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl border-4 border-white dark:border-slate-800 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Fashionable woman in NYC street editorial photography" src="Assets/1.png"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-20 px-6 lg:px-20 border-y border-primary/10" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-light-pink">
+<img class="w-full h-full object-cover object-top" data-alt="Professional headshot of Keyz Bonita smiling" src="Assets/2.png"/>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6">
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white">Authentic storytelling from the heart of NYC</h3>
+<p class="text-lg text-slate-600 dark:text-pink-100/70">
+                                As someone who started in the brand ambassador space, I learned early on how to represent a brand with confidence and connect with people face to face. Those experiences sparked my interest in content creation, because I wanted to keep telling brand stories but now in a more creative and digital way.
+                            </p>
+<p class="text-slate-600 dark:text-pink-100/70">
+                                Now, as a UGC creator, I bring that same energy to the camera. I focus on making content that feels relatable, visually appealing, and aligned with what real customers want to see. Whether it is a voiceover, a product demo, or a quick lifestyle video, my goal is to help brands show up in a way that builds trust and drives engagement.
+                            </p>
+<div class="grid grid-cols-3 gap-6 pt-6">
+<div>
+<p class="text-3xl font-black text-primary">11k</p>
+<p class="text-xs uppercase font-bold tracking-widest text-slate-400">Followers</p>
+</div>
+<div>
+<p class="text-3xl font-black text-primary">150+</p>
+<p class="text-xs uppercase font-bold tracking-widest text-slate-400">Collaborations</p>
+</div>
+<div>
+<p class="text-3xl font-black text-primary">320k</p>
+<p class="text-xs uppercase font-bold tracking-widest text-slate-400">Likes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto" id="services">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<h2 class="text-4xl font-black text-slate-900 dark:text-white">Creative Services</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-slate-500 dark:text-pink-200/60 max-w-xl">Tailored solutions for brands looking to make a lasting impression in the digital space.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">video_camera_back</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">UGC Creation</h4>
+<p class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed mb-6">Organic, high-energy video content for TikTok, Reels, and ads that drives engagement and sales.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all" href="#contact">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">camera</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Brand Partnership</h4>
+<p class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed mb-6">Long-term strategic collaborations and aesthetic content creation for your brand's digital channels.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all" href="#contact">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">event</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Event Support</h4>
+<p class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed mb-6">On-site content capturing and live social coverage for brand events, launches, and runways.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all" href="#contact">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<h2 class="text-4xl font-black text-slate-900 dark:text-white">Social Insights</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-slate-500 dark:text-pink-200/60 max-w-xl">Audience reach, content performance, and brand-ready collaboration insights.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Audience Overview</h4>
+<ul class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed space-y-3">
+<li>15K+ monthly viewers with a strong interest in beauty & lifestyle content</li>
+<li>Strong visibility through Search & FYP</li>
+<li>Consistent discovery even without daily posting</li>
+<li>Content that attracts new eyes every week</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Audience Demographics</h4>
+<ul class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed space-y-3">
+<li>74% Women</li>
+<li>23% Men</li>
+<li>3% Other</li>
+<li>Primarily US-based (NYC + major cities)</li>
+<li>Ideal for beauty, lifestyle, wellness, soft-life, and everyday brands</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Content Performance</h4>
+<ul class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed space-y-3">
+<li>Strong results on product demos, GRWM, tutorials, and storytelling</li>
+<li>High watch-through on short-form videos</li>
+<li>Hooks that pull viewers in quickly</li>
+<li>Relatable, warm, aesthetic visuals that convert</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-primary/10 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+<div class="w-14 h-14 bg-light-pink dark:bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Why Brands Work With Me</h4>
+<ul class="text-slate-500 dark:text-pink-200/60 text-sm leading-relaxed space-y-3">
+<li>Polished on-camera presence</li>
+<li>Follows briefs and meets deadlines</li>
+<li>Easy to direct + great communication</li>
+<li>Strong range: beauty, lifestyle, wellness, pet, home, and soft-life content</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="py-16 bg-light-pink dark:bg-primary/5 border-y border-primary/10">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-xs font-bold uppercase tracking-[0.3em] text-primary mb-8">Brands I’ve Worked With</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="Borghese logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="currentColor">BORGHESE</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="Peacock logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="600" letter-spacing="3" fill="currentColor">PEACOCK</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="Garnier logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="600" letter-spacing="2" fill="currentColor">GARNIER</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[180px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 220 48" role="img" aria-label="Neutrogena logo">
+<text x="110" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="currentColor">NEUTROGENA</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[140px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 160 48" role="img" aria-label="Olay logo">
+<text x="80" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="3" fill="currentColor">OLAY</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[140px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 160 48" role="img" aria-label="Stripe logo">
+<text x="80" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="23" font-weight="600" letter-spacing="2" fill="currentColor">STRIPE</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[120px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 140 48" role="img" aria-label="FIFA logo">
+<text x="70" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="2" fill="currentColor">FIFA</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="HBO Max logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="currentColor">HBO MAX</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="Laneige logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="600" letter-spacing="2" fill="currentColor">LANEIGE</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[140px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 160 48" role="img" aria-label="Adidas logo">
+<text x="80" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="currentColor">ADIDAS</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[160px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 200 48" role="img" aria-label="Sephora logo">
+<text x="100" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="21" font-weight="600" letter-spacing="2" fill="currentColor">SEPHORA</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[140px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 160 48" role="img" aria-label="Nike logo">
+<text x="80" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="currentColor">NIKE</text>
+</svg>
+</div>
+<div class="flex items-center justify-center group">
+<svg class="h-8 sm:h-9 w-full max-w-[140px] text-slate-500 dark:text-pink-200/60 group-hover:text-primary transition-all" viewBox="0 0 160 48" role="img" aria-label="Meta logo">
+<text x="80" y="32" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="600" letter-spacing="3" fill="currentColor">META</text>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto" id="work">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-black text-slate-900 dark:text-white">Recent Work</h2>
+<p class="text-primary font-medium mt-2">A glimpse into my aesthetic world.</p>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-primary hover:text-deep-pink transition-all hover:scale-105" href="https://www.instagram.com/keyzbonita" target="_blank" rel="noreferrer" aria-label="Instagram">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<path d="M16.8 3H7.2A4.2 4.2 0 0 0 3 7.2v9.6A4.2 4.2 0 0 0 7.2 21h9.6A4.2 4.2 0 0 0 21 16.8V7.2A4.2 4.2 0 0 0 16.8 3ZM19 16.8A2.2 2.2 0 0 1 16.8 19H7.2A2.2 2.2 0 0 1 5 16.8V7.2A2.2 2.2 0 0 1 7.2 5h9.6A2.2 2.2 0 0 1 19 7.2ZM12 7.8A4.2 4.2 0 1 0 16.2 12 4.2 4.2 0 0 0 12 7.8Zm0 6.4A2.2 2.2 0 1 1 14.2 12 2.2 2.2 0 0 1 12 14.2ZM17 6.6a1 1 0 1 0 1 1 1 1 0 0 0-1-1Z"/>
+</svg>
+</a>
+<a class="text-primary hover:text-deep-pink transition-all hover:scale-105" href="https://www.tiktok.com/@keyzbonita" target="_blank" rel="noreferrer" aria-label="TikTok">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<path d="M19.5 8.6c-1.5 0-2.9-.5-4-1.4v6.2a5.3 5.3 0 1 1-4.9-5.3v2.6a2.7 2.7 0 1 0 2.3 2.7V3.5h2.6c.7 1.8 2.4 3.1 4.4 3.3v1.8Z"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-light-pink relative group shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Feminine fashion flatlay with accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB0_b2MlsNX7mz6Mk70QRN6Vkt-p7h3hXh8aLp9FE4GOspDMdKp88a3mqqLk0Gfi3tF3Co3yTtH35IYppsGicfumfEDAPO1kcPgZDwVjk8r7phXe84NXoSh_7FYjp6GPke1gkldXKxm3lq-htbWeitrR4KxXJjSjt5U6Ip8UqP-1w9pea8aRx92rE7-fQU1TzgJx8c1C2U_MGLcseSnu_q4ioSg9Rv_wr6RbSyEFTpLgSGMeqwlDXYV7rQeJIp0QGu_axmxmvX0Tc"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-light-pink relative group shadow-lg translate-y-8">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Model posing in modern minimal studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUjQfVFrud4PXpai_zzU409BCnLXTiK54s0yxei5OssVw5_Ej8ZQ9dhXuwjdIJAJ7p5mRSokX7L62rzYAgxQJeASYVNYzcfagoH8B4p0c8usItnAMV8gry_ia4UsdfhaL58RnnoAGhaK5KlLoaroBjzRntKlHX5TIwNjZV3bxL-gxf8DxLB2asSU3gxYD4RMpd8gxnMZYf92ph7E4r_L915H6M9VV3wsGwG8XtJX_3wtLRKVs9aqJudYd5cgWHBOm6148DeyHcCS0"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">favorite</span>
+</div>
+</div>
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-light-pink relative group shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Skincare products aesthetic arrangement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBevq6sdS1F2R8Eai-VgXhd_so5ICIpPRveuzaW-nsjB3x7PBsUfUzdA6AqGE8Skf27cxftYA3BSowEDBscK3uJgLQhymasF0SKb764MI5eJh0QCcEskU7yE2rYzba7Dlx0n_rtKLmbr88oh0Hn1J2CCMFlDazxt9ilIa9C5L6aVzXvmjjkpSpLnKOhGnhJDxeJ2YdA5LGWxMyHi1ZbqgMjQAl6kZfjGXzIvPQNcVGGzB-dQ27zg3CXCENDKr_vRY0mpd76O3dtQCo"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-light-pink relative group shadow-lg translate-y-8">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Fashion portrait with neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZTTbPVCk3svnexZXnVxRLDmO4_-K4sghm0t0w7hVVDu7s7g8vdVCWDmFCUUzK8NHsJDZrS1Awobm0_W_dY8FpF_F6-EnZ6V6506QfqDTCZ51XdQ9U9wfmTTn9ZMcWm5WapZlQx8wX9pJ_lRzP_5ZSkugetXC-6HT413GSWGBs_AKrRJD09ZBmQwp6YNWwqoJu6Plsj1WGSyg2o9omCuOo5DsVzjMcJxv4OirvME4_R1mfxUNOoI9YXMSHSgMuBhwQOu1O3lKHH6s"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto" id="contact">
+<div class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 border border-primary/10">
+<div class="p-12 bg-primary text-white flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-4xl font-black mb-6">Let's Create Magic</h2>
+<p class="text-white/90 leading-relaxed mb-10 text-lg">Ready to take your brand's digital presence to the next level? Drop me a line and let's discuss your vision.</p>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-bold text-lg">keyzcreator@gmail.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<span class="font-bold text-lg">New York City, NY</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 pt-12 relative z-10 items-center">
+<a class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30 transition-all border border-white/20" href="https://www.instagram.com/keyzbonita" target="_blank" rel="noreferrer" aria-label="Instagram">
+<span class="material-symbols-outlined text-2xl">camera_alt</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30 transition-all border border-white/20" href="https://www.tiktok.com/@keyzbonita" target="_blank" rel="noreferrer" aria-label="TikTok">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</a>
+</div>
+</div>
+<div class="p-12 bg-white">
+<form class="flex flex-col gap-6" id="contact-form">
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">First Name</label>
+<input class="bg-light-pink border-2 border-primary/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4" placeholder="Keyz" type="text" name="firstName" autocomplete="given-name" required/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Last Name</label>
+<input class="bg-light-pink border-2 border-primary/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4" placeholder="Bonita" type="text" name="lastName" autocomplete="family-name" required/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Email Address</label>
+<input class="bg-light-pink border-2 border-primary/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4" placeholder="hello@example.com" type="email" name="email" autocomplete="email" required/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Interested In</label>
+<select class="bg-light-pink border-2 border-primary/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary py-3 px-4 appearance-none" name="interest" required>
+<option>UGC Creation</option>
+<option>Brand Partnership</option>
+<option>Editorial Shooting</option>
+<option>Other</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-primary">Message</label>
+<textarea class="bg-light-pink border-2 border-primary/5 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary px-4 py-3" placeholder="Tell me about your project..." rows="4" name="message" minlength="10" required></textarea>
+</div>
+<button class="bg-primary text-white py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:bg-deep-pink hover:scale-[1.02] transition-all">Send Message</button>
+<p class="text-sm font-semibold text-primary hidden" id="form-status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-12 px-6 lg:px-20 bg-white border-t border-primary/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+</div>
+<h1 class="text-lg font-extrabold tracking-tight uppercase italic text-slate-900">Keyz Bonita</h1>
+</div>
+<p class="text-sm font-medium text-slate-400">© 2024 Keyz Bonita. NYC Editorial &amp; Lifestyle.</p>
+<div class="flex gap-8 text-sm font-bold text-slate-600">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="https://www.canva.com/design/DAG6LhFKJFQ/OeALqGD9feK5MA-GaPcE7A/view?utm_content=DAG6LhFKJFQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h99aa530032#8" target="_blank" rel="noreferrer">Media Kit</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+if (contactForm) {
+    const fields = contactForm.querySelectorAll("input, select, textarea");
+    const setFieldState = (field, isValid) => {
+        if (isValid) {
+            field.style.borderColor = "";
+            field.style.boxShadow = "";
+        } else {
+            field.style.borderColor = "#c9184a";
+            field.style.boxShadow = "0 0 0 2px rgba(201, 24, 74, 0.25)";
+        }
+    };
+    fields.forEach((field) => {
+        field.addEventListener("input", () => {
+            setFieldState(field, field.checkValidity());
+            if (formStatus) {
+                formStatus.classList.add("hidden");
+                formStatus.textContent = "";
+            }
+        });
+    });
+    contactForm.addEventListener("submit", (event) => {
+        if (!contactForm.checkValidity()) {
+            event.preventDefault();
+            fields.forEach((field) => setFieldState(field, field.checkValidity()));
+            if (formStatus) {
+                formStatus.textContent = "Please complete the highlighted fields.";
+                formStatus.classList.remove("hidden");
+            }
+            return;
+        }
+        event.preventDefault();
+        if (formStatus) {
+            formStatus.textContent = "Thanks! Your message is ready to send.";
+            formStatus.classList.remove("hidden");
+        }
+        contactForm.reset();
+    });
+}
+</script>
+</body>
+</html>
+</body></html>
