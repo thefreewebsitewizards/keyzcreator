@@ -411,12 +411,18 @@
 <a class="hover:text-primary transition-colors" href="https://www.canva.com/design/DAG6LhFKJFQ/OeALqGD9feK5MA-GaPcE7A/view?utm_content=DAG6LhFKJFQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h99aa530032#8" target="_blank" rel="noreferrer">Media Kit</a>
 </div>
 </div>
-</footer>
+    </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
+const submitButton = contactForm?.querySelector("button");
+const emailServiceId = "service_mjfnpp8";
+const contactTemplateId = "template_phefw2c";
+const confirmationTemplateId = "template_eghtwpw";
 if (contactForm) {
+    emailjs.init("v3qbKGnjS00yf2gdV");
     const fields = contactForm.querySelectorAll("input, select, textarea");
     const setFieldState = (field, isValid) => {
         if (isValid) {
@@ -436,7 +442,7 @@ if (contactForm) {
             }
         });
     });
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", async (event) => {
         if (!contactForm.checkValidity()) {
             event.preventDefault();
             fields.forEach((field) => setFieldState(field, field.checkValidity()));
@@ -448,10 +454,61 @@ if (contactForm) {
         }
         event.preventDefault();
         if (formStatus) {
-            formStatus.textContent = "Thanks! Your message is ready to send.";
+            formStatus.textContent = "Sending your message...";
             formStatus.classList.remove("hidden");
         }
-        contactForm.reset();
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.style.opacity = "0.7";
+        }
+        const formData = new FormData(contactForm);
+        const firstName = formData.get("firstName")?.toString().trim() || "";
+        const lastName = formData.get("lastName")?.toString().trim() || "";
+        const fromEmail = formData.get("email")?.toString().trim() || "";
+        const fullName = `${firstName} ${lastName}`.trim();
+        const baseParams = {
+            firstName,
+            lastName,
+            email: fromEmail,
+            interest: formData.get("interest")?.toString().trim() || "",
+            message: formData.get("message")?.toString().trim() || ""
+        };
+        const adminParams = {
+            ...baseParams,
+            to_email: "keyzcreator@gmail.com",
+            reply_to: fromEmail,
+            to: "keyzcreator@gmail.com",
+            recipient: "keyzcreator@gmail.com"
+        };
+        const confirmationParams = {
+            ...baseParams,
+            to_email: fromEmail,
+            reply_to: "keyzcreator@gmail.com",
+            to_name: fullName,
+            to: fromEmail,
+            recipient: fromEmail
+        };
+        try {
+            await Promise.all([
+                emailjs.send(emailServiceId, contactTemplateId, adminParams),
+                emailjs.send(emailServiceId, confirmationTemplateId, confirmationParams)
+            ]);
+            if (formStatus) {
+                formStatus.textContent = "Thanks! Your message has been sent.";
+                formStatus.classList.remove("hidden");
+            }
+            contactForm.reset();
+        } catch (error) {
+            if (formStatus) {
+                formStatus.textContent = "Something went wrong while sending. Please try again.";
+                formStatus.classList.remove("hidden");
+            }
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.style.opacity = "";
+            }
+        }
     });
 }
 </script>
